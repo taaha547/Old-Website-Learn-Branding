@@ -1,0 +1,11 @@
+<!--
+  Usage inside any article's Markdown body (repeat once per item):
+  {% include components/numbered-step.html number="1" title="Does the brand have a recognizable, ownable color?" text="If a reader can't answer this from memory, it isn't a distinctive asset yet." %}
+-->
+<div class="flex items-start gap-space-sm p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+  <div class="w-6 h-6 rounded bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold shrink-0 mt-0.5">{{ include.number }}</div>
+  <div>
+    <h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">{{ include.title }}</h3>
+    <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">{{ include.text }}</p>
+  </div>
+</div>
