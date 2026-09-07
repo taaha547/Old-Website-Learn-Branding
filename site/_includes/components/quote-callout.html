@@ -1,0 +1,15 @@
+<!--
+  Usage inside any article's Markdown body:
+  {% include components/quote-callout.html eyebrow="Core Axiom" quote="Brands compete mainly for light, infrequent buyers." source="Byron Sharp" citation="How Brands Grow, 2010" %}
+-->
+<div class="bg-surface-container-low p-space-md lg:p-space-lg rounded-xl space-y-space-sm">
+  <div class="flex items-center gap-2 text-primary font-label-sm text-label-sm font-bold uppercase">
+    <span class="material-symbols-outlined text-[18px]">format_quote</span>
+    <span>{{ include.eyebrow | default: "Core Claim" }}</span>
+  </div>
+  <blockquote class="font-headline-md text-headline-md font-bold text-on-surface italic leading-snug">"{{ include.quote }}"</blockquote>
+  <div class="pt-space-xs flex items-center justify-between text-on-surface-variant font-caption text-caption">
+    <span>{{ include.source }}</span>
+    {% if include.citation %}<span class="font-label-sm text-label-sm text-primary font-bold">{{ include.citation }}</span>{% endif %}
+  </div>
+</div>
