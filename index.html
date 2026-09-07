@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn Branding — Learn Brand Strategy</title>
+<meta name="description" content="Branding taught right. Learn brand strategy from the psychology up — not just frameworks, but why they actually work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream: #FFFACD;
+    --cream-card: #FFFCF0;
+    --orange-800: #FE5900;
+    --orange-700: #FF6A13;
+    --orange-500: #FF7E2E;
+    --orange-300: #FFA75E;
+    --orange-100: #FFE1BE;
+    --ink: #2B1D0E;
+    --ink-soft: #5B4327;
+    --white: #FFFFFF;
+    --max: 1180px;
+    --radius-lg: 28px;
+    --radius-md: 18px;
+    --radius-sm: 12px;
+    --font-display: "Baloo 2", sans-serif;
+    --font-body: "Inter", sans-serif;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  img,svg{ display:block; max-width:100%; }
+  a{ color: inherit; text-decoration: none; }
+  .wrap{
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  section{ padding: 72px 0; }
+  a:focus-visible, button:focus-visible{
+    outline: 3px solid var(--orange-800);
+    outline-offset: 3px;
+  }
+
+  /* ---------- Header ---------- */
+  header.site-header{
+    padding: 28px 0 0;
+  }
+  .site-header .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--orange-800);
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+  }
+  .logo svg{ flex-shrink:0; }
+  nav.site-nav{
+    display:flex;
+    gap:28px;
+    font-weight:600;
+    font-size:0.95rem;
+    color: var(--ink-soft);
+  }
+  nav.site-nav a{
+    padding: 6px 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color .15s ease, color .15s ease;
+  }
+  nav.site-nav a:hover{ color: var(--orange-800); border-color: var(--orange-800); }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 24px;
+  }
+  .hero h1{
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--orange-800);
+    font-size: clamp(3rem, 7.5vw, 5.6rem);
+    line-height: 0.92;
+    letter-spacing: -0.01em;
+    margin: 0 0 28px;
+  }
+  .hero h1 span{ display:block; }
+  .hero .tagline{
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--orange-800);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+  .hero-art{
+    justify-self: center;
+    width: 100%;
+  }
+  .graphic-slot{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background: var(--cream-card);
+    border: 2px dashed var(--orange-300);
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    padding: 20px;
+  }
+  .graphic-slot span{ opacity: 0.75; }
+  img.hero-art, img.orb-art{
+    width: 100%;
+    height: auto;
+  }
+
+  /* ---------- What is section ---------- */
+  .what-is{
+    background: var(--orange-800);
+    color: var(--white);
+    padding: 76px 0;
+  }
+  .what-is .wrap{
+    display:grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 48px;
+    align-items:center;
+  }
+  .what-is .eyebrow{
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    color: var(--cream);
+    margin: 0 0 4px;
+  }
+  .what-is h2{
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: clamp(2.1rem, 5vw, 3.4rem);
+    line-height: 1.02;
+    color: var(--cream);
+    margin: 0 0 24px;
+  }
+  .what-is p{
+    font-size: 1.08rem;
+    line-height: 1.7;
+    max-width: 46ch;
+    color: #FFF3DC;
+  }
+  .orb-art{
+    justify-self:center;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* ---------- Roadmap ---------- */
+  .roadmap h2{
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align:center;
+    color: var(--orange-800);
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    margin: 0 0 48px;
+  }
+  .roadmap-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 24px;
+  }
+  .pill{
+    background: var(--orange-300);
+    color: var(--white);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.98rem;
+    text-align:center;
+    padding: 18px 26px;
+    border-radius: 999px;
+    line-height: 1.3;
+  }
+
+  /* ---------- Articles table ---------- */
+  .articles h2{
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-align:center;
+    color: var(--orange-800);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: clamp(1.3rem, 3vw, 1.7rem);
+    margin: 0 0 28px;
+  }
+  .articles-table{
+    width:100%;
+    border-collapse: collapse;
+    background: var(--cream-card);
+    border-radius: var(--radius-md);
+    overflow:hidden;
+    box-shadow: 0 1px 0 rgba(43,29,14,0.08);
+  }
+  .articles-table th{
+    text-align:left;
+    background: var(--orange-100);
+    color: var(--orange-800);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 16px 24px;
+    border-bottom: 2px solid var(--orange-300);
+  }
+  .articles-table td{
+    padding: 18px 24px;
+    border-bottom: 1px solid #F1E3BE;
+    font-size: 0.98rem;
+    vertical-align: middle;
+  }
+  .articles-table tr:last-child td{ border-bottom:none; }
+  .articles-table .article-link{
+    font-weight: 700;
+    color: var(--ink);
+    transition: color .15s ease;
+  }
+  .articles-table .article-link:hover{ color: var(--orange-800); text-decoration:underline; }
+  .tag{
+    display:inline-block;
+    background: var(--orange-100);
+    color: var(--orange-800);
+    font-weight:600;
+    font-size: 0.82rem;
+    padding: 4px 12px;
+    border-radius: 999px;
+  }
+  .articles-table .placeholder-row td{
+    color: var(--ink-soft);
+    font-style: italic;
+    text-align:center;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq{
+    background: var(--orange-800);
+    color: var(--white);
+  }
+  .faq h2{
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--cream);
+    text-align:center;
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    margin: 0 0 44px;
+  }
+  .faq-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .faq-card{
+    background: var(--cream-card);
+    border-radius: var(--radius-md);
+    padding: 26px 22px;
+  }
+  .faq-card h3{
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--orange-800);
+    font-size: 1.02rem;
+    text-transform: uppercase;
+    line-height: 1.25;
+    margin: 0 0 14px;
+  }
+  .faq-card p{
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin:0;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    padding: 36px 0 48px;
+    text-align:center;
+    color: var(--ink-soft);
+    font-size: 0.88rem;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px){
+    .hero .wrap{ grid-template-columns: 1fr; text-align:center; }
+    .hero-art{ margin: 32px auto 0; }
+    .what-is .wrap{ grid-template-columns: 1fr; text-align:center; }
+    .what-is p{ margin-inline:auto; }
+    .orb-art{ margin: 8px auto 0; order: 2; }
+    .roadmap-grid{ grid-template-columns: 1fr; }
+    .pill:nth-child(1) { order: 1; }
+    .pill:nth-child(2) { order: 6; }
+    .pill:nth-child(3) { order: 2; }
+    .pill:nth-child(4) { order: 7; }
+    .pill:nth-child(5) { order: 3; }
+    .pill:nth-child(6) { order: 8; }
+    .pill:nth-child(7) { order: 4; }
+    .pill:nth-child(8) { order: 9; }
+    .pill:nth-child(9) { order: 5; }
+    .pill:nth-child(10) { order: 10; }
+    .faq-grid{ grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px){
+    section{ padding: 48px 0; }
+    .wrap{ padding: 0 20px; }
+    header.site-header{ padding: 20px 0 0; }
+    .site-header .wrap{ justify-content:center; text-align:center; }
+    nav.site-nav{ gap:16px; font-size:0.85rem; justify-content:center; width:100%; }
+    .hero{ padding-top: 28px; padding-bottom: 8px; }
+    .hero h1{ font-size: clamp(2.4rem, 13vw, 3.4rem); line-height: 0.95; }
+    .hero-art{ max-width: 190px; }
+    .what-is{ padding: 52px 0; }
+    .what-is p{ font-size: 1rem; }
+    .orb-art{ max-width: 160px; }
+    .roadmap h2, .faq h2{ font-size: clamp(1.9rem, 9vw, 2.6rem); }
+    .faq-grid{ grid-template-columns: 1fr; }
+    .articles-table-wrap{ overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .articles-table{ min-width: 480px; }
+    .articles-table th, .articles-table td{ padding: 12px 14px; font-size: 0.88rem; }
+  }
+  @media (max-width: 380px){
+  .hero-art, .orb-art{
+    display: block;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="17" fill="none" stroke="#F15A00" stroke-width="3.2"/>
+        <circle cx="20" cy="20" r="10" fill="none" stroke="#F15A00" stroke-width="3.2"/>
+        <circle cx="20" cy="20" r="3.4" fill="#F15A00"/>
+        <path d="M5 5 L13 13 M5 5 L5 1.5 M5 5 L8.5 5" stroke="#F15A00" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      Learn Branding
+    </a>
+    <nav class="site-nav">
+      <a href="#roadmap">Roadmap</a>
+      <a href="#articles">Articles</a>
+      <a href="#faqs">FAQs</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1><span>Learn</span><span>Brand</span><span>Strategy</span></h1>
+      <p class="tagline">Branding taught right</p>
+    </div>
+    <img class="hero-art" src="assets/img/hero-graphic2.png" alt="This is a sequence of stars and squiggles to enhance user experience">
+    </div>
+</section>
+
+<section class="what-is">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">What is</p>
+      <h2>Brand Strategy?</h2>
+      <p>Most branding advice tells you what to do — pick a colour, write a tagline, "be authentic." We start further back and explain why any of that actually works. Learn Branding breaks brand strategy down to the psychology and behavioural science underneath it, so the frameworks make sense instead of feeling like guesswork borrowed from someone else's playbook.</p>
+    </div>
+    <img class="orb-art" src="assets/img/what-is-graphic.png" alt="A decorative orb like shape to enhance user experience">
+    </div>
+</section>
+
+<section class="roadmap" id="roadmap">
+  <div class="wrap">
+    <h2>Roadmap</h2>
+    <div class="roadmap-grid">
+      <div class="pill">Section 1: Basics of Branding</div>
+      <div class="pill">Section 6: Branding and Expression</div>
+      <div class="pill">Section 2: Building Blocks of Brand Strategy</div>
+      <div class="pill">Section 7: Introduction to B2B Branding</div>
+      <div class="pill">Section 3: Brand Strategy in Action</div>
+      <div class="pill">Section 8: Tools for Brand Automation and Management</div>
+      <div class="pill">Section 4: Managing Brand Relationships</div>
+      <div class="pill">Section 9: B2B Branding in the Digital Ecosystem</div>
+      <div class="pill">Section 5: Digital Transformation of Branding</div>
+      <div class="pill">Section 10: The Role of AI in Branding</div>
+    </div>
+  </div>
+</section>
+
+<section class="articles" id="articles">
+  <div class="wrap">
+    <h2>List of Other Articles</h2>
+    <div class="articles-table-wrap">
+    <table class="articles-table">
+      <thead>
+        <tr>
+          <th>Name of Article</th>
+          <th>Tags</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a class="article-link" href="articles/objects-vs-brands">Object vs. Brands: What Makes a Product Worth Defending?</a></td>
+          <td><span class="tag">Brand Psychology</span></td>
+        </tr>
+        <tr class="placeholder-row">
+          <td colspan="2">More articles publishing soon...</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faqs">
+  <div class="wrap">
+    <h2>FAQs</h2>
+    <div class="faq-grid">
+      <div class="faq-card">
+        <h3>What can this platform do for me?</h3>
+        <p>This platform helps you understand branding from the ground up. Instead of asking you to memorise frameworks or jargon, we teach the psychology behind branding so you understand why things work. By the end, you'll be able to make branding decisions with confidence rather than copying trends.</p>
+      </div>
+      <div class="faq-card">
+        <h3>Who is this platform for?</h3>
+        <p>It's built for beginners — whether you're a student, founder, freelancer, designer, marketer, or simply curious about branding. If you've ever found branding confusing or overly complicated, this platform is designed to make it clear and approachable.</p>
+      </div>
+      <div class="faq-card">
+        <h3>How is this different from other branding courses?</h3>
+        <p>Most branding resources tell you what to do. We explain why it works. Every lesson is grounded in psychology, behavioural science, and real-world examples, with complex ideas translated into plain English so anyone can understand them.</p>
+      </div>
+      <div class="faq-card">
+        <h3>What will I be able to do after learning here?</h3>
+        <p>You'll understand how people perceive brands, why certain businesses become memorable, and how to apply those principles to your own work. Instead of relying on guesswork, you'll have a clear mental model for building brands that people remember and trust.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+   <b> © 2026 Learn Branding. Written and built by Taaha Zaidi. </b>
+  </div>
+</footer>
+
+</body>
+</html>
